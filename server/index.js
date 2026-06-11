@@ -14,7 +14,7 @@ const server = http.createServer(app);
 // 1. CORS POLICY CONFIGURATION
 // Yeh aapke frontend (port 5181, 5173, etc.) ko block hone se rokega
 app.use(cors({
-    origin: "*",
+    origin: ["http://localhost:5173", "https://safe-space-app-chi.vercel.app"], // 👈 Aapki Vercel link yahan honi chahiye!
     credentials: true
 }));
 app.use(express.json());
