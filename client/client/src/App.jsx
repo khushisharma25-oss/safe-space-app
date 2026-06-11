@@ -4,7 +4,7 @@ import axios from 'axios';
 import { io } from 'socket.io-client';
 
 // Socket Server URL Connect
-const BACKEND_URL = window.location.hostname === 'localhost' ? 'http://localhost:5000' : 'https://YOUR-BACKEND-NAME.onrender.com';
+const BACKEND_URL = "https://safe-space-app-oj9e.onrender.com";
 const socket = io.connect(BACKEND_URL);
 // ==========================================
 // 1. PRODUCTION LEVEL AUTH PAGE (Login/Signup)
