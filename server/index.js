@@ -23,11 +23,10 @@ app.use(express.json());
 // Jo laal rang ke socket errors aa rahe the, yeh unka pakka ilaaj hai
 const io = new Server(server, {
     cors: {
-        origin: "*",
+        origin: ["http://localhost:5173", "https://safe-space-app-chi.vercel.app"],
         methods: ["GET", "POST"]
     }
 });
-
 io.on("connection", (socket) => {
     console.log(`👤 User connected on chat: ${socket.id}`);
     socket.on("send_message", (data) => {
